@@ -1,0 +1,94 @@
+[
+  {
+    "id": "prod_001",
+    "name": "Starter Pack",
+    "description": "Perfect for individuals just getting started with resume building.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["5 basic templates", "PDF export", "Basic ATS check"],
+    "icon": "https://i.ibb.co.com/4RYfBGyH/design-tool.png"
+  },
+  {
+    "id": "prod_002",
+    "name": "Pro Resume",
+    "description": "Advanced tools for job seekers who want to stand out.",
+    "price": 9.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF & DOCX",
+      "Cover letter builder"
+    ],
+    "icon": "https://i.ibb.co.com/chVtfRvL/operation.png"
+  },
+  {
+    "id": "prod_003",
+    "name": "Career Boost",
+    "description": "Annual plan with full access to all premium features.",
+    "price": 79.99,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best-seller",
+    "features": [
+      "Everything in Pro",
+      "LinkedIn optimizer",
+      "Interview prep kit",
+      "Priority support"
+    ],
+    "icon": "https://i.ibb.co.com/V7YLQR3/portfolio.png"
+  },
+  {
+    "id": "prod_004",
+    "name": "Team Plan",
+    "description": "Collaborative workspace for HR teams and recruiters.",
+    "price": 49.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Up to 10 seats",
+      "Shared templates",
+      "Team analytics",
+      "Admin dashboard"
+    ],
+    "icon": "https://i.ibb.co.com/4nQ411pS/shopping-cart.png"
+  },
+  {
+    "id": "prod_005",
+    "name": "Enterprise",
+    "description": "Custom solutions for large organizations and staffing agencies.",
+    "price": 299.99,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Unlimited seats",
+      "Custom branding",
+      "API access",
+      "Dedicated account manager",
+      "SLA guarantee"
+    ],
+    "icon": "https://i.ibb.co.com/C5VW9VpR/social-media.png"
+  },
+  {
+    "id": "prod_006",
+    "name": "Lifetime Access",
+    "description": "One-time purchase for unlimited lifetime access to all features.",
+    "price": 199.99,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best-seller",
+    "features": [
+      "All Pro features forever",
+      "Free future updates",
+      "Bonus resume review",
+      "Early access to new tools"
+    ],
+    "icon": "https://i.ibb.co.com/DDs731N1/writing-2327400-1.png"
+  }
+]
