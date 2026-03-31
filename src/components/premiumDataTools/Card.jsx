@@ -1,24 +1,46 @@
 import React from "react";
+import { TiTick } from "react-icons/ti";
 
 const Card = ({ product }) => {
   console.log(product);
+  let allFeature = product.features;
   return (
     <>
-      <div className="w-80 h-96 p-4">
+      <div className="w-80 h-auto p-4 shadow-sm rounded-xl space-y-3">
         <div className="flex items-center justify-between">
-          <div className="">
-            <img src={product.icon} alt="Product icon" />
+          <div className="shadow-md w-10 h-10 rounded-full flex items-center justify-center">
+            <img
+              className=" object-cover object-center"
+              src={product.icon}
+              alt="Product icon"
+            />
           </div>
           <button
-            className={`btn btn-soft rounded-full ${product.tag == "new" ? "btn-primary" : product.tag == "popular" ? "btn-success" : "btn-warning"}`}
+            className={`btn btn-soft rounded-full ${product.tag == "new" ? "btn-success" : product.tag == "popular" ? "btn-primary" : "btn-warning"}`}
           >
             {product.tag}
           </button>
         </div>
-        <div>
-          <h2></h2>
+        <div className="space-y-2">
+          <h2 className="text-2xl font-bold">{product.name}</h2>
+          <p>{product.description}</p>
         </div>
-        <div></div>
+        <div className="space-y-2">
+          <h2 className="text-xl font-bold">
+            {product.price}$/{product.period}
+          </h2>
+          <div className="space-y-2">
+            {allFeature.map((feature) => (
+              <li className="list-none flex items-center">
+                <TiTick className="text-green-600"></TiTick>
+                {feature}
+              </li>
+            ))}
+          </div>
+        </div>
+        <button className="btn bg-linear-to-r from-[#4F39F6] to-purple-500 text-white w-full rounded-full">
+          Buy Now
+        </button>
       </div>
     </>
   );

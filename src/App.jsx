@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./components/banner/Banner";
 import Nav from "./components/navbar/nav";
@@ -12,6 +12,7 @@ const fetchProduct = async () => {
 };
 
 function App() {
+  const [isProductSelected, setIsProductSelected] = useState("products");
   const productPromise = fetchProduct();
   return (
     <>
@@ -19,11 +20,17 @@ function App() {
         <Nav></Nav>
         <Banner></Banner>
         <State></State>
-        <PremiumDataTools></PremiumDataTools>
+        <PremiumDataTools
+          isProductSelected={isProductSelected}
+          setIsProductSelected={setIsProductSelected}
+        ></PremiumDataTools>
         <Suspense
           fallback={<span className="loading loading-dots loading-xl"></span>}
         >
-          <ProductCard productPromise={productPromise}></ProductCard>
+          <ProductCard
+            productPromise={productPromise}
+            isProductSelected={isProductSelected}
+          ></ProductCard>
         </Suspense>
       </div>
     </>
