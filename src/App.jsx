@@ -1,21 +1,29 @@
 import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./components/banner/Banner";
-import Nav from "./components/navbar/nav";
 import PremiumDataTools from "./components/premiumDataTools/PremiumDataTools";
 import State from "./components/state/state";
 import ProductCard from "./components/premiumDataTools/ProductCard";
 import { ToastContainer } from "react-toastify";
+import GetStarted from "./components/getStarted/GetStarted";
+import Nav1 from "./components/navbar/Nav1";
+import TransparantPricing from "./components/transparantPricing/TransparantPricing";
 
 const fetchProduct = async () => {
   const res = await fetch("/data.json");
   return res.json();
 };
 
+const fetchGetStarted = async () => {
+  const res = await fetch("/getStartedData.json");
+  return res.json();
+};
+
 function App() {
+  const productPromise = fetchProduct();
+  const fetchGetStartedPromise = fetchGetStarted();
   const [isProductSelected, setIsProductSelected] = useState("products");
   const [selectedCart, setSelectedCart] = useState([]);
-  const productPromise = fetchProduct();
   const totalPrice = selectedCart.reduce(
     (total, cart) => total + parseFloat(cart.price),
     0,
@@ -23,7 +31,7 @@ function App() {
   return (
     <>
       <div className="space-y-5 flex flex-col items-center justify-center">
-        <Nav selectedCart={selectedCart} totalPrice={totalPrice}></Nav>
+        <Nav1 selectedCart={selectedCart} totalPrice={totalPrice}></Nav1>
         <Banner></Banner>
         <State></State>
         <PremiumDataTools
@@ -42,10 +50,17 @@ function App() {
             totalPrice={totalPrice}
           ></ProductCard>
         </Suspense>
+
+        <Suspense
+          fallback={<span className="loading loading-dots loading-xl"></span>}
+        >
+          <GetStarted
+            fetchGetStartedPromise={fetchGetStartedPromise}
+          ></GetStarted>
+        </Suspense>
+        <TransparantPricing></TransparantPricing>
       </div>
 
-
-      
       <ToastContainer></ToastContainer>
     </>
   );

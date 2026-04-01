@@ -43,7 +43,7 @@ const Card = ({ product, setSelectedCart, selectedCart }) => {
         <button
           onClick={() => {
             setSelectedCart([...selectedCart, product]);
-            toast(`${product.name} was selected`);
+            toast.success(`${product.name} was added to cart`);
             setAddedToCart(true);
           }}
           className={`btn  text-white w-full rounded-full ${addedToCart ? "bg-green-600" : "bg-linear-to-r from-[#4F39F6] to-purple-500"}`}

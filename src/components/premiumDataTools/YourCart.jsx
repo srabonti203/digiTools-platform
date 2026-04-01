@@ -1,6 +1,7 @@
 import React from "react";
 import { FiShoppingCart } from "react-icons/fi";
 import cartImage from "../../assets/cart.jpg";
+import { toast } from "react-toastify";
 
 const YourCart = ({ selectedCart, setSelectedCart, totalPrice }) => {
   console.log(selectedCart);
@@ -34,7 +35,10 @@ const YourCart = ({ selectedCart, setSelectedCart, totalPrice }) => {
                   </div>
                 </div>
                 <button
-                  onClick={() => handleDeleteSelectedCart(cart)}
+                  onClick={() => {
+                    handleDeleteSelectedCart(cart);
+                    toast.error("cart was removed.");
+                  }}
                   className="btn btn-soft btn-error"
                 >
                   Remove
@@ -48,7 +52,10 @@ const YourCart = ({ selectedCart, setSelectedCart, totalPrice }) => {
           <div className="text-xl font-bold">${totalPrice}</div>
         </div>
         <button
-          onClick={handleProcedCheckout}
+          onClick={() => {
+            handleProcedCheckout;
+            toast.success("Proced to checkout.");
+          }}
           className="btn bg-linear-to-r from-indigo-800 to-purple-800 rounded-full w-full text-white"
         >
           Proced To Checkout

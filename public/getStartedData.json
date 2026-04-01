@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Create Account",
+    "image": "https://i.ibb.co.com/MxjVnLLY/user.png",
+    "description": "Get started for free with no commitments. Perfect for individuals exploring the platform."
+  },
+  {
+    "id": 2,
+    "name": "Choose Product",
+    "image": "https://i.ibb.co.com/PGsrcpyB/package.png",
+    "description": "Unlock powerful tools and integrations. Ideal for growing teams and professionals."
+  },
+  {
+    "id": 3,
+    "name": "Start Creating",
+    "image": "https://i.ibb.co.com/3mwkz2VW/rocket.png",
+    "description": "Full-scale access for enterprises and power users who demand the best performance."
+  }
+]
