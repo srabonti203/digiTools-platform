@@ -1,6 +1,10 @@
 import React from "react";
 
-const PremiumDataTools = ({ isProductSelected, setIsProductSelected }) => {
+const PremiumDataTools = ({
+  isProductSelected,
+  setIsProductSelected,
+  selectedCart,
+}) => {
   return (
     <div className="w-10/12 mx-auto flex flex-col items-center justify-center space-y-4">
       <h2 className="text-3xl font-bold">Premium Digital Tools</h2>
@@ -19,7 +23,7 @@ const PremiumDataTools = ({ isProductSelected, setIsProductSelected }) => {
           onClick={() => setIsProductSelected("Cart")}
           className={`btn rounded-full ${isProductSelected == "Cart" ? "bg-linear-to-r from-[#4F39F6] to-purple-500 text-white" : ""}`}
         >
-          Cart (2)
+          Cart ({selectedCart.length})
         </button>
       </div>
     </div>

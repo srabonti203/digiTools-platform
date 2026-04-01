@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { TiTick } from "react-icons/ti";
+import { toast } from "react-toastify";
 
-const Card = ({ product }) => {
-  console.log(product);
+const Card = ({ product, setSelectedCart, selectedCart }) => {
+  // console.log(product);
+  const [addedToCart, setAddedToCart] = useState(false);
   let allFeature = product.features;
   return (
     <>
@@ -38,8 +40,22 @@ const Card = ({ product }) => {
             ))}
           </div>
         </div>
-        <button className="btn bg-linear-to-r from-[#4F39F6] to-purple-500 text-white w-full rounded-full">
-          Buy Now
+        <button
+          onClick={() => {
+            setSelectedCart([...selectedCart, product]);
+            toast(`${product.name} was selected`);
+            setAddedToCart(true);
+          }}
+          className={`btn  text-white w-full rounded-full ${addedToCart ? "bg-green-600" : "bg-linear-to-r from-[#4F39F6] to-purple-500"}`}
+        >
+          {addedToCart ? (
+            <div className="flex items-center">
+              <TiTick></TiTick>
+              <p>Added to Cart</p>
+            </div>
+          ) : (
+            "Buy Now"
+          )}
         </button>
       </div>
     </>

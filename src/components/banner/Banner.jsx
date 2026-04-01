@@ -6,7 +6,7 @@ import { CiPlay1 } from "react-icons/ci";
 const Banner = () => {
   return (
     <>
-      <div className="hero bg-base-100 min-h-screen w-10/12 mx-auto">
+      <div className="hero bg-base-100 h-5/12 w-10/12 mx-auto">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src={bannerimage} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
