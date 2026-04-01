@@ -6,7 +6,7 @@ import twitter from "../../assets/Twitter.png";
 const Footer = () => {
   return (
     <div className="w-10/12 mx-auto p-4 space-y-4 bg-[#101727]">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-5 items-center md:flex-row md:justify-between ">
         <div>
           <h2 className="text-xl font-bold text-white">DigiTools</h2>
           <p className="text-white">
@@ -15,6 +15,7 @@ const Footer = () => {
             suite of powerful tools.
           </p>
         </div>
+
         <div>
           <h3 className="text-lg text-white">Product</h3>
           <ul className="list-none text-white">
@@ -24,6 +25,7 @@ const Footer = () => {
             <li>Integrations</li>
           </ul>
         </div>
+
         <div>
           <h3 className="text-lg text-white">Company</h3>
           <ul className="list-none text-white">
@@ -33,6 +35,7 @@ const Footer = () => {
             <li>Press</li>
           </ul>
         </div>
+
         <div>
           <h3 className="text-lg text-white">Resources</h3>
           <ul className="list-none text-white">
@@ -42,6 +45,7 @@ const Footer = () => {
             <li>Contact</li>
           </ul>
         </div>
+
         <div>
           <h3 className="text-lg text-white">Social Links</h3>
           <div className="flex items-center justify-between gap-3">
@@ -60,7 +64,7 @@ const Footer = () => {
 
       <hr className="border border-gray-600" />
 
-      <div className="flex items-center justify-between ">
+      <div className="flex flex-col items-center md:flex-row md:justify-between ">
         <p className="text-white">© 2026 Digitools. All rights reserved.</p>
         <div className="flex items-center justify-between gap-6 text-white">
           <p>Privacy</p>

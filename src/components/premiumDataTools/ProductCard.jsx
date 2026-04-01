@@ -12,9 +12,9 @@ const ProductCard = ({
   const productData = use(productPromise);
   console.log(productData);
   return (
-    <div className="w-10/12 flex items-center justify-center">
+    <div className="flex items-center justify-center">
       {isProductSelected == "products" ? (
-        <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {productData.map((product) => (
             <Card
               key={product.id}

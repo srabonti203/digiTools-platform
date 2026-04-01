@@ -9,7 +9,7 @@ const TransparantPricing = () => {
         <p>
           Choose the plan that fits your needs. Upgrade or downgrade anytime.
         </p>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col items-center md:flex-row md:justify-between gap-10">
           <div className="space-y-3 w-80 h-auto p-4 shadow-sm rounded-xl flex flex-col items-start">
             <div className="flex flex-col items-start">
               <h2 className="text-xl font-bold">Starter</h2>

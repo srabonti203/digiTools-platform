@@ -13,7 +13,7 @@ const Banner = () => {
             <button className="btn bg-indigo-800/20 rounded-full text-indigo-800">
               <img src={roundicon} alt="" /> New: AI-Powered Tools Available
             </button>
-            <h1 className="text-7xl font-bold">
+            <h1 className="text-5xl md:text-7xl font-bold">
               Supercharge Your <br /> Digital Workflow
             </h1>
             <p className="py-6">
