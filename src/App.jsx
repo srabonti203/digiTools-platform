@@ -8,6 +8,8 @@ import { ToastContainer } from "react-toastify";
 import GetStarted from "./components/getStarted/GetStarted";
 import Nav1 from "./components/navbar/Nav1";
 import TransparantPricing from "./components/transparantPricing/TransparantPricing";
+import Footer from "./components/footer/footer";
+import Workflow from "./components/workflow/Workflow";
 
 const fetchProduct = async () => {
   const res = await fetch("/data.json");
@@ -59,6 +61,8 @@ function App() {
           ></GetStarted>
         </Suspense>
         <TransparantPricing></TransparantPricing>
+        <Workflow></Workflow>
+        <Footer></Footer>
       </div>
 
       <ToastContainer></ToastContainer>
