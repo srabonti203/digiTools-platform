@@ -57,7 +57,7 @@ const YourCart = ({ selectedCart, setSelectedCart, totalPrice }) => {
     );
   } else {
     return (
-      <div className="w-10/12 mx-auto bg-base-100 shadow-md h-80 space-y-4 rounded-md p-5 flex flex-col items-center justify-center">
+      <div className="w-10/12 mx-auto bg-base-100 shadow-xl h-80 space-y-4 rounded-md p-5 flex flex-col items-center justify-center">
         <h2 className="text-xl font-bold">Your Cart</h2>
         <div className="w-20 h-20 flex items-center justify-center">
           <img src={cartImage} alt="cart image" />
