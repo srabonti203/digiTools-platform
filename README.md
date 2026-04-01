@@ -1,16 +1,22 @@
-# React + Vite
+# DigiTools-Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DigiTool-platform is a single page application for buying different ai model subscription.Here card datas are rendered dynamically.There is cart notification functionality,add to cart functionality,one can remove the card from cart also,notifications are showed using reacr toastify.
 
-Currently, two official plugins are available:
+## Technologies used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+-React.js
+-Tailwind CSS, DaisyUI
+-JavaScript (ES6+)
+-React-Toastify (NPM Package)
+-JSON (for product data)
 
-## React Compiler
+## 3 Features developed in this project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-Smart card system
+Any product can be added to the cart with a single click. The navbar instantly updates showing the total item count and live subtotal price — all managed through React state with no page reload required. Users can also view a cart summary dropdown directly from the navbar.
 
-## Expanding the ESLint configuration
+-Toast notification
+Every cart interaction is accompanied by a real-time toast notification using React Toastify. When a user adds a product to the cart, an instant feedback message pops up.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-Empty Cart Conditional Rendering
+When no product has been added to the cart, the navbar cart dropdown intelligently reflects the empty state — showing 0 Items and a $0 subtotal. The cart count badge and total price both update conditionally.
